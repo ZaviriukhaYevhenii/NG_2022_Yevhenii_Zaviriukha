@@ -5,7 +5,7 @@ if numberOfSeconds > 86400:
     numbers = numberOfSeconds // 86400
     print("Dey ", numbers, end="")
     
-    numbers = numberOfSeconds % 86400 // 3600
+    numbers = (numberOfSeconds % 86400) // 3600
     print(" Hour ", numbers, end="")
     
     numbers = ((numberOfSeconds % 86400)% 3600)// 60
