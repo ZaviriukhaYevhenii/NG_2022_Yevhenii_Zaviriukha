@@ -1,6 +1,6 @@
 def userInput():
-    userInputString = input("Enter string - ")
-    return userInputString
+    string = input("Enter string - ")
+    return string
 
 def numbersLetters(string):
     from collections import Counter
