@@ -1,13 +1,22 @@
 def userInput():
-    string = input("Enter string - ")
-    return string
+    userEnterString = input("Enter string - ")
+    return userEnterString
 
-def numbersLetters(string):
-    from collections import Counter
-    if(string == ""):
-        return 0
-    else:
-        collection = Counter(string)
-        print(collection)
+def valueLetters(element, string):
+    dictoonaryLetters = {}
+    dictoonaryLetters[element] = string.count(element)
+    return str(dictoonaryLetters[element])
 
-numbersLetters(userInput())
+
+def definitionLetters(stringExample):
+
+    uniqueLetters = set(stringExample)
+    listLetters = uniqueLetters
+
+    uniqueLetters = (list(map(lambda element: valueLetters(element, stringExample), uniqueLetters)))
+
+    numbersLetters = dict(zip(listLetters, uniqueLetters))
+    print("The number of each letter in the line - " + str(numbersLetters))
+    
+
+definitionLetters(userInput())
